@@ -25,7 +25,7 @@ public class HelloControllerTest {
         String body = client.toBlocking().retrieve(request);
 
         assertNotNull(body);
-        assertEquals("Hello sofuss", body);
+        assertEquals("Hello sofus", body);
     }
     @Test
     public void testCombineName() {
