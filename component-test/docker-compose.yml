@@ -8,3 +8,4 @@ services:
       - web
   web:
     image: ghcr.io/${docker_username}micronaut-app:latest
+  

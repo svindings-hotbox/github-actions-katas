@@ -49,6 +49,8 @@ jobs:
           path: .
       - name: build docker
         run: bash ci/build-docker.sh
+      - name: Docker Login
+        run: bash ci/docker-login.sh
       - name: push docker
         run: bash ci/push-docker.sh
   Component-test:
@@ -60,6 +62,8 @@ jobs:
         with: 
           name: code
           path: .
+      - name: Docker Login
+        run: bash ci/docker-login.sh
       - name: Execute component test
         run: bash ci/component-test.sh
   Performance-test:
@@ -71,9 +75,11 @@ jobs:
         with: 
           name: code
           path: .
+      - name: Docker Login
+        run: bash ci/docker-login.sh
       - name: Execute component test
         run: bash ci/performance-test.sh
 
-      
+
 
 
